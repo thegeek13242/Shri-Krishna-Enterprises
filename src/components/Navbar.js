@@ -1,14 +1,11 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
+
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
+
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 
 // const pages = ["About Us", "Brands", "Bank Details", "Enquiry"];
 
@@ -44,7 +41,7 @@ const ResponsiveAppBar = () => {
           >
             Shri Krishna Enterprises
           </Typography>
-{/* 
+          {/* 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -56,7 +53,7 @@ const ResponsiveAppBar = () => {
             >
               <MenuIcon />
             </IconButton> */}
-            {/* <Menu
+          {/* <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -74,7 +71,7 @@ const ResponsiveAppBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             > */}
-              {/* {pages.map((page) => (
+          {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>

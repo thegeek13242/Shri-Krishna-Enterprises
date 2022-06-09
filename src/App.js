@@ -1,6 +1,6 @@
 import "./App.css";
 import ResponsiveAppBar from "./components/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
