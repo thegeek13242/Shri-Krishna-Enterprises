@@ -167,7 +167,7 @@ const cardEnq = (
           <form name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="enquiry" />
               <p>
-              <TextField required id="outlined-required" label="Name" margin="normal" />
+              <TextField required id="outlined-required" label="Name" name="name" margin="normal" />
               </p>
               <p>
               <TextField
@@ -175,17 +175,19 @@ const cardEnq = (
                 id="outlined-required"
                 label="Phone Number"
                 type="number"
+                name="phone"
                 margin="normal"
               />
               </p>
               <p>
-              <TextField id="outlined" label="Email" type="email" margin="normal"/>
+              <TextField id="outlined" label="Email" name="email" type="email" margin="normal"/>
               </p>
               <p>
             <TextField
             required
               id="outlined-textarea-required"
               label="Message"
+              name="message"
               minLines={5}
               multiline
               margin="normal"
