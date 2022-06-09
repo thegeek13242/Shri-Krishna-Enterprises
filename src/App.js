@@ -139,9 +139,9 @@ const cardBank = (
         <Typography variant="body1">
           Bank Name: Canara Bank
           <br />
-          Account Number:
+          Account Number: 87251010002727
           <br />
-          IFSC Code:
+          IFSC Code: CNRB0018725
           <br />
           UPI ID: 8077835822@upi
         </Typography>
