@@ -25,8 +25,8 @@ import IndianImm from "./components/indianimmu.jpg";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { ListItemText } from "@mui/material";
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
 
 const Name = "Wholesaler of Monopoly & Critical Care Injectable Products";
 const Title = "";
@@ -43,6 +43,7 @@ const salts = [
   "Meropenum 1g",
   "Pipercilin + Tazobactum 4.5g/2.25g",
   "Ceftrixzone 1g + Sulbactum 500mg",
+  "Cefoperazone & Sulbactum 1.5g",
   "Amoxycillin + Clauvulanic Acid 1.2g",
   "Esomeprazole inj",
   "N - Acetylcysteine 2/5 mL",
@@ -75,34 +76,33 @@ const salts = [
   "Ondesetron inj",
   "Drotavarine inj",
   "Diclofenac inj",
-  "Levosulpiride inj"
+  "Levosulpiride inj",
+  "Cerebroprotein 60mg inj",
 ];
 
 const cardSalt = (
   <React.Fragment>
     <CardContent>
-        <Typography variant="h5" component="div">
-          {saltCardHead}
-        </Typography>
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
-      <List>
-        {
-            salts.map((salt) => {
-              return (
-                <ListItem>
-                  <ListItemText primary={salt} />
-                </ListItem>
-              );
-            })
-        }
-      </List>
-    </Box>
+      <Typography variant="h5" component="div">
+        {saltCardHead}
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
+      >
+        <List>
+          {salts.map((salt) => {
+            return (
+              <ListItem>
+                <ListItemText primary={salt} />
+              </ListItem>
+            );
+          })}
+        </List>
+      </Box>
     </CardContent>
   </React.Fragment>
 );
