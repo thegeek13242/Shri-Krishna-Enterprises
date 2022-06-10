@@ -21,9 +21,89 @@ import Usv from "./components/usv.png";
 import Lupin from "./components/lupin.png";
 import Cipla from "./components/cipla.png";
 import Zydus from "./components/zydus.png";
+import IndianImm from "./components/indianimmu.jpg";
 import TextField from "@mui/material/TextField";
-import Button from '@mui/material/Button';
- 
+import Button from "@mui/material/Button";
+import { ListItemText } from "@mui/material";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+
+const Name = "Wholesaler of Monopoly & Critical Care Injectable Products";
+const Title = "";
+const Contact = "tel:+918077835822";
+const Location = "https://goo.gl/maps/X47kCtxLbFeNnRYu7";
+const WALink = "https://wa.me/+918077835822";
+const Email = "mailto:shkrishent@gmail.com";
+
+const salts = [
+  "Anti - Rabies Vaccine",
+  "Meropenum 1g",
+  "Pipercilin + Tazobactum 4.5g/2.25g",
+  "Ceftrixzone 1g + Sulbactum 500mg",
+  "Amoxycillin + Clauvulanic Acid 1.2g",
+  "Esomeprazole inj",
+  "N - Acetylcysteine 2/5 mL",
+  "Citicoline 2/4 mL inj",
+  "Amikacin 500mg",
+  "Doxycycline inj",
+  "Enoxaparin 40/60mg PFS",
+  "Glutathione 600mg",
+  "Iron Sucrose inj",
+  "Labetalol 5mg",
+  "L - ornithine-laspartate infusion",
+  "Methylcobalamine 1500/2500",
+  "Methylprednisolone 40/125/500mg/1g",
+  "Nandrolone 50mg",
+  "Noradrenaline 4mg/2mL",
+  "Nimodipine infusion 10mg/50mL",
+  "Piracetam 60mL/15mL",
+  "Thiamine 200mg",
+  "Tranexamic inj 500mg/5mL",
+  "Vitamin K inj",
+  "Clindamycin inj",
+  "Paracetamol infusion",
+  "Ofloxacin infusion",
+  "Levofloxacin infusion",
+  "Tigecycline 50mg",
+  "Moxifloxacin infusion",
+  "Human Albumin",
+  "Amino Acid",
+  "Hydroxyprogesterone 250/500mg",
+  "Ondesetron inj",
+  "Drotavarine inj",
+  "Diclofenac inj",
+  "Levosulpiride inj"
+];
+
+const cardSalt = (
+  <React.Fragment>
+    <CardContent>
+        <Typography variant="h5" component="div">
+          Salts/Medicines Available
+        </Typography>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+      }}
+    >
+      <List>
+        {
+            salts.map((salt) => {
+              return (
+                <ListItem>
+                  <ListItemText primary={salt} />
+                </ListItem>
+              );
+            })
+        }
+      </List>
+    </Box>
+    </CardContent>
+  </React.Fragment>
+);
+
 const cardAbout = (
   <React.Fragment>
     <Box
@@ -35,10 +115,10 @@ const cardAbout = (
     >
       <CardContent>
         <Typography variant="h4" component="div">
-          Vivek Verma
+          {Name}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          Pharma Wholesaler
+          {Title}
         </Typography>
         <Typography variant="body1">
           <ul>
@@ -48,6 +128,7 @@ const cardAbout = (
 
             <li>All major pharmaceutical companies are available here.</li>
             <ul>
+              <li>Indian Immunologicals Limited</li>
               <li>Cipla</li>
               <li>Sun Pharma</li>
               <li>Abbott</li>
@@ -63,19 +144,16 @@ const cardAbout = (
         </Typography>
       </CardContent>
       <CardActions>
-        <IconButton aria-label="call" href="tel:+918077835822">
+        <IconButton aria-label="call" href={Contact}>
           <LocalPhoneIcon />
         </IconButton>
-        <IconButton
-          aria-label="directions"
-          href="https://goo.gl/maps/X47kCtxLbFeNnRYu7"
-        >
+        <IconButton aria-label="directions" href={Location}>
           <DirectionsIcon />
         </IconButton>
-        <IconButton aria-label="whatsapp" href="https://wa.me/+918077835822">
+        <IconButton aria-label="whatsapp" href={WALink}>
           <WhatsAppIcon />
         </IconButton>
-        <IconButton aria-label="email" href="mailto:shkrishent@gmail.com">
+        <IconButton aria-label="email" href={Email}>
           <EmailIcon />
         </IconButton>
       </CardActions>
@@ -96,6 +174,12 @@ const cardBrands = (
         <Typography variant="h5" component="div">
           Brands
         </Typography>
+
+        <CardMedia
+          component="img"
+          image={IndianImm}
+          alt="Indian Immunologicals Limited"
+        ></CardMedia>
 
         <CardMedia
           component="img"
@@ -137,13 +221,13 @@ const cardBank = (
         </Typography>
         <br />
         <Typography variant="body1">
-          Bank Name: Canara Bank
+          Bank Name: <b>Canara Bank</b>
           <br />
-          Account Number: 87251010002727
+          Account Number: <b>87251010002727</b>
           <br />
-          IFSC Code: CNRB0018725
+          IFSC Code: <b>CNRB0018725</b>
           <br />
-          UPI ID: 8077835822@upi
+          UPI ID: <b>8077835822@upi</b>
         </Typography>
       </CardContent>
     </Box>
@@ -164,12 +248,23 @@ const cardEnq = (
         </Typography>
         <br />
         <Typography variant="body1">
-          <form name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="enquiry" />
-              <p>
-              <TextField required id="outlined-required" label="Name" name="name" margin="normal" />
-              </p>
-              <p>
+          <form
+            name="enquiry"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="enquiry" />
+            <p>
+              <TextField
+                required
+                id="outlined-required"
+                label="Name"
+                name="name"
+                margin="normal"
+              />
+            </p>
+            <p>
               <TextField
                 required
                 id="outlined-required"
@@ -178,23 +273,31 @@ const cardEnq = (
                 name="phone"
                 margin="normal"
               />
-              </p>
-              <p>
-              <TextField id="outlined" label="Email" name="email" type="email" margin="normal"/>
-              </p>
-              <p>
-            <TextField
-            required
-              id="outlined-textarea-required"
-              label="Message"
-              name="message"
-              minLines={5}
-              multiline
-              margin="normal"
-            />
             </p>
             <p>
-               <Button variant="contained" type="submit" margin="normal">Send</Button>
+              <TextField
+                id="outlined"
+                label="Email"
+                name="email"
+                type="email"
+                margin="normal"
+              />
+            </p>
+            <p>
+              <TextField
+                required
+                id="outlined-textarea-required"
+                label="Message"
+                name="message"
+                rows={4}
+                multiline
+                margin="normal"
+              />
+            </p>
+            <p>
+              <Button variant="contained" type="submit" margin="normal">
+                Send
+              </Button>
             </p>
           </form>
         </Typography>
@@ -213,6 +316,11 @@ function App() {
           <div id="about">
             <Box sx={{ minWidth: 275, margin: 5 }}>
               <Card variant="outlined">{cardAbout}</Card>
+            </Box>
+          </div>
+          <div id="salts">
+            <Box sx={{ minWidth: 275, margin: 5 }}>
+              <Card variant="outlined">{cardSalt}</Card>
             </Box>
           </div>
           <div id="brands">
