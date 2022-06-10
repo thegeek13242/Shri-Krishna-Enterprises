@@ -12,16 +12,17 @@ import IconButton from "@mui/material/IconButton";
 import DirectionsIcon from "@mui/icons-material/Directions";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
+import Fab from "@mui/material/Fab";
 import CardMedia from "@mui/material/CardMedia";
-import MankindLogo from "./components/mankind.jpg";
-import Abbott from "./components/abbott.jpg";
-import Micro from "./components/microlabs.png";
-import Sun from "./components/sun.png";
-import Usv from "./components/usv.png";
-import Lupin from "./components/lupin.png";
-import Cipla from "./components/cipla.png";
-import Zydus from "./components/zydus.png";
-import IndianImm from "./components/indianimmu.jpg";
+import MankindLogo from "./components/assets/mankind.jpg";
+import Abbott from "./components/assets/abbott.jpg";
+import Micro from "./components/assets/microlabs.png";
+import Sun from "./components/assets/sun.png";
+import Usv from "./components/assets/usv.png";
+import Lupin from "./components/assets/lupin.png";
+import Cipla from "./components/assets/cipla.png";
+import Zydus from "./components/assets/zydus.png";
+import IndianImm from "./components/assets/indianimmu.jpg";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { ListItemText } from "@mui/material";
@@ -316,6 +317,14 @@ function App() {
           <ResponsiveAppBar></ResponsiveAppBar>
         </header>
         <div className="App-body">
+            <Fab
+              color="primary"
+              aria-label="message on whatsapp"
+              href={WALink}
+              sx={{ position: "fixed", bottom: 16, right: 16 }}
+            >
+              <WhatsAppIcon />
+            </Fab>
           <div id="about">
             <Box sx={{ minWidth: 275, margin: 5 }}>
               <Card variant="outlined">{cardAbout}</Card>
