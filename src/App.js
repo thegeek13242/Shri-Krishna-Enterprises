@@ -34,9 +34,12 @@ const Contact = "tel:+918077835822";
 const Location = "https://goo.gl/maps/X47kCtxLbFeNnRYu7";
 const WALink = "https://wa.me/+918077835822";
 const Email = "mailto:shkrishent@gmail.com";
+const saltCardHead = "Monopoly Injectable Available";
+const enqCardHead = "Product Enquiry";
 
 const salts = [
   "Anti - Rabies Vaccine",
+  "Erythroprotein 2K/4K/10K PFS",
   "Meropenum 1g",
   "Pipercilin + Tazobactum 4.5g/2.25g",
   "Ceftrixzone 1g + Sulbactum 500mg",
@@ -79,7 +82,7 @@ const cardSalt = (
   <React.Fragment>
     <CardContent>
         <Typography variant="h5" component="div">
-          Salts/Medicines Available
+          {saltCardHead}
         </Typography>
     <Box
       sx={{
@@ -244,7 +247,7 @@ const cardEnq = (
     >
       <CardContent>
         <Typography variant="h5" component="div">
-          Product Enquiry
+          {enqCardHead}
         </Typography>
         <br />
         <Typography variant="body1">
