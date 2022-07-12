@@ -79,6 +79,14 @@ const salts = [
   "Diclofenac inj",
   "Levosulpiride inj",
   "Cerebroprotein 60mg inj",
+  "Esomeprazol inj",
+  "Pantaprazole inj",
+  "Ofloxaxian inj",
+  "Linzolid inj",
+  "Meropenum 1gm+ Sulbactum 500mg inj",
+  "Imipenem & Cilastatin inj",
+  "Glutathione inj",
+  "Levetiracetam inj"
 ];
 
 const cardSalt = (
